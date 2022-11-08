@@ -11,7 +11,6 @@ import com.informatorio.demo.entity.Usuario;
 
 @Service
 public class UsuarioServiceImpl {
-<<<<<<< HEAD
 
 	@Autowired
 	private IUsuarioDao usuarioDao;
@@ -20,22 +19,5 @@ public class UsuarioServiceImpl {
 		return usuarioDao.save(usuario);
 	}
 	
-=======
-/*
-	//@Autowired
-	private IUsuarioDao usuarioDao;
-	
-	public Usuario save(Usuario usuario) {
-		
-		// codigo que guarda el usuario 
-		
-		return usuarioDao.save(usuario);
-	}
-*/	
-	public String save(String usuario) {
-		return "El usuario fue guardado correctamente."+ usuario;
-	
-	}
->>>>>>> 6344fa958f685edae160a81c494469461918cc93
 
 }
