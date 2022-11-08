@@ -1,0 +1,9 @@
+package com.ob.practicasJava;
+
+public class tiposDatos {
+
+	public tiposDatos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.ob.practicasJava;
+
+public class tiposDatos {
+
+	public static void main( String[] args) {
+		
+		byte variableByte = 23;
+		
+		System.out.println("Variable Byte: "+variableByte);
+		
+	}
+
+}
