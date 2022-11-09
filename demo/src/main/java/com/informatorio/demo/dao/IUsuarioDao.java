@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.informatorio.demo.entity.Usuario;
 
-@Repository
+//@Repository("usuarioDao")
 public interface IUsuarioDao extends JpaRepository< Usuario, Long >{
 
 }
