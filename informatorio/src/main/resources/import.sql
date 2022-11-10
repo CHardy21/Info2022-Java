@@ -1,0 +1,3 @@
+INSERT INTO users (user_name, user_lastname, user_birth, user_dni, user_email) VALUES ('Christian', 'Hardy', '1976-09-27', 24509, 'user_email@hotmail.com')
+INSERT INTO users (user_name, user_lastname, user_birth, user_dni, user_email) VALUES ('Roberto', 'Hardy', '1976-09-27', 24509, 'user_email@hotmail.com')
+INSERT INTO users (user_name, user_lastname, user_birth, user_dni, user_email) VALUES ('ChriX', 'Hardy', '1976-09-27', 24509, 'user_email@hotmail.com')
