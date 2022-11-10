@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.informatorio.demo.entity.Usuario;
 import com.informatorio.demo.service.UsuarioServiceImpl;
 
-@RequestMapping("/spring-api/v1")
+@RequestMapping("/spring-api/v1/user")
 @RestController
 
 public class controlador {
