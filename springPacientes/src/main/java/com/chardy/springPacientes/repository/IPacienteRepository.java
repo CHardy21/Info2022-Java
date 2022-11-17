@@ -5,6 +5,5 @@ import org.springframework.stereotype.Repository;
 
 import com.chardy.springPacientes.entity.Paciente;
 
-
 @Repository
 public interface IPacienteRepository extends JpaRepository<Paciente, Long>{}
