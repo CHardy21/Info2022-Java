@@ -32,7 +32,9 @@ public class PacienteController {
 		HashMap<String, Object> response = new HashMap<String, Object>();
 		List<Paciente> pacientes = pacienteService.findAll();
 		
+		response.put("status", "ok");
 		response.put("items", pacientes);
+		
 		
 		return new ResponseEntity<HashMap<String, Object>>(response, HttpStatus.OK);
 	}
