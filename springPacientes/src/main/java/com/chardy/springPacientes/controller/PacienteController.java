@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.chardy.springPacientes.entity.Paciente;
+import com.chardy.springPacientes.entity.Patient;
 import com.chardy.springPacientes.service.IPacienteService;
 
 
@@ -30,10 +30,10 @@ public class PacienteController {
 	@GetMapping("/all")
 	public ResponseEntity<HashMap<String, Object>> todosLosPacientes(){
 		HashMap<String, Object> response = new HashMap<String, Object>();
-		List<Paciente> pacientes = pacienteService.findAll();
+		List<Patient> patients = pacienteService.findAll();
 		
 		response.put("status", "ok");
-		response.put("items", pacientes);
+		response.put("items", patients);
 		
 		
 		return new ResponseEntity<HashMap<String, Object>>(response, HttpStatus.OK);

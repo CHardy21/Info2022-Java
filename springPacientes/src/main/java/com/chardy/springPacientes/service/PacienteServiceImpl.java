@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chardy.springPacientes.entity.Paciente;
+import com.chardy.springPacientes.entity.Patient;
 import com.chardy.springPacientes.repository.IPacienteRepository;
 
 
@@ -16,7 +16,7 @@ public class PacienteServiceImpl implements IPacienteService{
 	IPacienteRepository pacienteRepository;
 
 	@Override
-	public List<Paciente> findAll() {
+	public List<Patient> findAll() {
 		return pacienteRepository.findAll();
 	}
 
