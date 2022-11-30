@@ -22,8 +22,14 @@ public class Patient implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(length=30)	    	// (name = "user_name")aqui va el nombre del campo en la DB... sino pongo nada 
-	private String name;		// toma por defecto el nombre de la variable (nombre en este caso).
+	/* @Column o @Column(...) entre los parentesis podemos definir por ejemplo (name = "user_name")
+	 * que seria el nombre del campo en la DB... sino pongo nada
+	*  toma por defecto el nombre de la variable.
+	*  Tambien aqui irian las restricciones del campo por ejemplo max de 30 caracteres..(lenght=30).
+	*/
+	 
+	@Column(length=30)	    	 
+	private String name;		
 	
 	@Column(length=30)
 	private String lastName;
