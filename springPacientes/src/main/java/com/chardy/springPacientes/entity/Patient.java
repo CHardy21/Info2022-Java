@@ -3,18 +3,23 @@ package com.chardy.springPacientes.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
-@Entity	
+@Entity(name="patients")
 
 public class Patient implements Serializable{
 	
-	private static final long SerialVersionUID = 1L;
+
+	private static final long serialVersionUID = 1L;
+
 	
 	// columnas de la tabla
 	
@@ -40,23 +45,30 @@ public class Patient implements Serializable{
 	
 	private Date birthDate;
 	
-	private Address address;
+	//private Address address;
 	
-	@Column(name = "medical_visits")
-	private MedicalVisits medicalVisits;
+	//@Column(name = "medical_visits")
+	//private MedicalVisits medicalVisits;
+	
 	
 	@Column(name = "medical_reports")
+	@OneToOne(
+			mappedBy = "patient",
+			cascade = { CascadeType.ALL},
+			orphanRemoval = true,
+			fetch = FetchType.LAZY
+			)
 	private MedicalRecord medicalRecord;
 	
-	@Column(name = "medical_assurance")
-	private String medicalAssurance;
+	//@Column(name = "medical_assurance")
+	//private String medicalAssurance;
 	
 	// CONSTRUCTS
 	
 	public Patient() {
 		super();
 	}
-	
+	/*
 	public Patient(Long id, String name, String lastName, Integer dni, Date birthDate, Address address,
 			MedicalVisits medicalVisits, MedicalRecord medicalRecord, String medicalAssurance) {
 		super();
@@ -148,7 +160,7 @@ public class Patient implements Serializable{
 	public void setMedicalAssurance(String medicalAssurance) {
 		this.medicalAssurance = medicalAssurance;
 	}
-
+*/
 	
 
 
