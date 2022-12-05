@@ -6,12 +6,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.UniqueConstraint;
 
 
@@ -22,6 +24,7 @@ public class MedicalRecord implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="medical_records_id")
 	private Long id;
 	
 	@Column(name="height_cm")
@@ -31,13 +34,18 @@ public class MedicalRecord implements Serializable{
 	
 	private Integer Years;
 	
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="patient_id")
+	private Patient patients;
+	
 	@ManyToMany(cascade = { CascadeType.ALL} )
 	@JoinTable(
 			name = "medical_records_id_diseases_id",
 			joinColumns = { @JoinColumn(name="medical_record_id")},
-			inverseJoinColumns = { @JoinColumn(name="disease_id")},
-			uniqueConstraints = {@UniqueConstraint(columnNames= {"medical_record_id","disease_id"})}
+			inverseJoinColumns = { @JoinColumn(name="disease_id")}
+			//uniqueConstraints = {@UniqueConstraint(columnNames= {"medical_records_id","diseases_id"})}
 			)
+	
 	private List<Disease> diseases;
 
 	//----------------------------

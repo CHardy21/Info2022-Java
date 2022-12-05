@@ -22,6 +22,7 @@ public class Patient implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="patient_id")
 	private Long id;
 	
 	/* @Column o @Column(...) entre los parentesis podemos definir por ejemplo (name = "user_name")
@@ -37,7 +38,6 @@ public class Patient implements Serializable{
 	private String lastName;
 	
 	@Column(unique=false)
-	
 	private Integer dni;
 	
 	private Date birthDate;
@@ -48,9 +48,9 @@ public class Patient implements Serializable{
 	private MedicalVisit medicalVisits;
 	
 	
-	@Column(name = "medical_records")
+	//@Column(name = "medical_records")
 	@OneToOne(
-			mappedBy = "patient",
+			mappedBy = "patients",
 			cascade = { CascadeType.ALL},
 			orphanRemoval = true,
 			fetch = FetchType.LAZY

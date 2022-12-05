@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
 @Entity(name="medical_visits")
@@ -19,12 +21,17 @@ public class MedicalVisit implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="medical_visit_id")
 	private Long id;
 	
-	@Column(name="visit_date")
+	@Column(name="medical_visit_date")
 	private Date visitDate;
 
-
+	
+	// @ManyToOne
+	// @JoinColumn(name="medical_visit_id")
+	 private Doctor doctors;
+	 
 	//----------------------------
 	// CONSTRUCTORES DE LA CLASE
 	//----------------------------
