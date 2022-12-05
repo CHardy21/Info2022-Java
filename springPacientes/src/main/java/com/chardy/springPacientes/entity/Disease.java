@@ -21,7 +21,7 @@ public class Disease implements Serializable{
 	private String description;
 
 	//----------------------------
-	// Constructores de la clase
+	// CONSTRUCTORES DE LA CLASE
 	//----------------------------
 	
 	public Disease() {
@@ -70,9 +70,5 @@ public class Disease implements Serializable{
 	}
 
 
-	
-	
-
-	
 	
 }

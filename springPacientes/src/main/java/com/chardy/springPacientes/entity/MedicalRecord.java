@@ -20,7 +20,6 @@ public class MedicalRecord implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -34,7 +33,7 @@ public class MedicalRecord implements Serializable{
 	
 	@ManyToMany(cascade = { CascadeType.ALL} )
 	@JoinTable(
-			name = "medical_record_id_disease_id",
+			name = "medical_records_id_diseases_id",
 			joinColumns = { @JoinColumn(name="medical_record_id")},
 			inverseJoinColumns = { @JoinColumn(name="disease_id")},
 			uniqueConstraints = {@UniqueConstraint(columnNames= {"medical_record_id","disease_id"})}
@@ -95,17 +94,8 @@ public class MedicalRecord implements Serializable{
 		return diseases;
 	}
 
-
 	public void setDiseases(List<Disease> diseases) {
 		this.diseases = diseases;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

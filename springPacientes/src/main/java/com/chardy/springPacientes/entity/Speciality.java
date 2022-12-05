@@ -13,14 +13,16 @@ public class Speciality  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	// columnas de la tabla
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String name;
-
+	
+	
+	//----------------------------
+	// CONSTRUCTORES DE LA CLASE
+	//----------------------------
+	
 	public Speciality() {
 		super();
 	}
@@ -31,6 +33,11 @@ public class Speciality  implements Serializable{
 		this.name = name;
 	}
 
+	
+	//---------------------
+	//  GETTERS y SETTERS
+	//---------------------
+	
 	public Long getId() {
 		return id;
 	}

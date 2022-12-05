@@ -1,49 +1,42 @@
 package com.chardy.springPacientes.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-@Entity(name="medical_visits")
-public class MedicalVisit implements Serializable{
-
+@Entity(name="numbers_streets")
+public class NumberStreet implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
-
-	// columnas de la tabla
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name="visit_date")
-	private Date visitDate;
-
+	private Integer number;
 
 	//----------------------------
 	// CONSTRUCTORES DE LA CLASE
 	//----------------------------
 	
-	public MedicalVisit() {
+	public NumberStreet() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public MedicalVisit(Long id, Date visitDate) {
+	public NumberStreet(Long id, Integer number) {
 		super();
 		this.id = id;
-		this.visitDate = visitDate;
+		this.number = number;
 	}
-	
-	
+
 	//---------------------
 	//  GETTERS y SETTERS
 	//---------------------
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -52,13 +45,14 @@ public class MedicalVisit implements Serializable{
 		this.id = id;
 	}
 
-	public Date getVisitDate() {
-		return visitDate;
+	public Integer getNumber() {
+		return number;
 	}
 
-	public void setVisitDate(Date visitDate) {
-		this.visitDate = visitDate;
+	public void setNumber(Integer number) {
+		this.number = number;
 	}
 	
 	
+
 }
