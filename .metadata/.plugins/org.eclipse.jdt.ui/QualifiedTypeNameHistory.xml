@@ -41,4 +41,5 @@
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+    <fullyQualifiedTypeName name="com.turnosRegistro.shift.record.formsAndResponses.MessagePagination"/>
 </qualifiedTypeNameHistroy>
