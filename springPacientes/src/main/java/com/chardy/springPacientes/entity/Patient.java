@@ -42,7 +42,7 @@ public class Patient implements Serializable{
 	
 	private Date birthDate;
 	
-	//private Address address;
+	private Address address;
 	
 	@Column(name = "medical_visits")
 	private MedicalVisit medicalVisits;
@@ -57,20 +57,107 @@ public class Patient implements Serializable{
 			)
 	private MedicalRecord medicalRecords;
 	
-	//@Column(name = "medical_assurance")
-	//private String medicalAssurance;
+	@Column(name = "medical_assurance")
+	private String medicalAssurance;
+
 	
-	// CONSTRUCTS
+	//===================
+	//    CONSTRUCTS
+	//===================
 	
 	public Patient() {
 		super();
 	}
 
+	public Patient(Long id, String name, String lastName, Integer dni, Date birthDate, Address address,
+			MedicalVisit medicalVisits, MedicalRecord medicalRecords, String medicalAssurance) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.lastName = lastName;
+		this.dni = dni;
+		this.birthDate = birthDate;
+		this.address = address;
+		this.medicalVisits = medicalVisits;
+		this.medicalRecords = medicalRecords;
+		this.medicalAssurance = medicalAssurance;
+	}
 
+	//===================
 	// GETTERS Y SETTERS
 	//===================
+	
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Integer getDni() {
+		return dni;
+	}
+
+	public void setDni(Integer dni) {
+		this.dni = dni;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public MedicalVisit getMedicalVisits() {
+		return medicalVisits;
+	}
+
+	public void setMedicalVisits(MedicalVisit medicalVisits) {
+		this.medicalVisits = medicalVisits;
+	}
+
+	public MedicalRecord getMedicalRecords() {
+		return medicalRecords;
+	}
+
+	public void setMedicalRecords(MedicalRecord medicalRecords) {
+		this.medicalRecords = medicalRecords;
+	}
+
+	public String getMedicalAssurance() {
+		return medicalAssurance;
+	}
+
+	public void setMedicalAssurance(String medicalAssurance) {
+		this.medicalAssurance = medicalAssurance;
+	}
 
 
 		

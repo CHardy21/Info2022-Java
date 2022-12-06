@@ -30,7 +30,7 @@ public class MedicalVisit implements Serializable{
 	
 	// @ManyToOne
 	// @JoinColumn(name="medical_visit_id")
-	 private Doctor doctors;
+	private Doctor doctors;
 	 
 	//----------------------------
 	// CONSTRUCTORES DE LA CLASE
@@ -40,19 +40,31 @@ public class MedicalVisit implements Serializable{
 		super();
 	}
 
-	public MedicalVisit(Long id, Date visitDate) {
+	public MedicalVisit(Long id, Date visitDate, Doctor doctors) {
 		super();
 		this.id = id;
 		this.visitDate = visitDate;
-	}
-	
+		this.doctors = doctors;
+	}	
 	
 	//---------------------
 	//  GETTERS y SETTERS
 	//---------------------
 
+
+
+
+
 	public Long getId() {
 		return id;
+	}
+
+	public Doctor getDoctors() {
+		return doctors;
+	}
+
+	public void setDoctors(Doctor doctors) {
+		this.doctors = doctors;
 	}
 
 	public void setId(Long id) {

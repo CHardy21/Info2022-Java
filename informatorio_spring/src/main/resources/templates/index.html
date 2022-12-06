@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head">
+
+</head>
+
+<body class="bg-secondary">
+	
+	<p th:text="${long}"></p>
+	<table>
+	  <thead>
+	    <tr>
+	      <th >Apellido</th>
+	      <th >DNI</th>
+	      <th >Email</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr th:each="us:${usuarios}">
+	      <td th:text="${us.getNombre}" ></td>
+	      <td th:text="${us.getApellido}"></td>
+	      <td th:text="${us.getNacimiento}"></td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+
+</html>
