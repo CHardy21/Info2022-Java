@@ -3,7 +3,12 @@ approved.defs.file.last.changed.time=1649720987000
 configurationInstallLocation=/D\:/CHardyE-DK/Spring Tools Suite 4/sts-4.16.0.RELEASE/
 eclipse.preferences.version=1
 iconcolormode=primary
+<<<<<<< HEAD
 last.download.attempt.time=1670846487078
 lastConfiguration=1670846477976
+=======
+last.download.attempt.time=1670803474731
+lastConfiguration=1670803442723
+>>>>>>> 40fcac404a5104255a58e30590b9d28aa0ab2a66
 newinstall=true
 workbench.theme=Dark Gray

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class PatientDto {
 
 	@NotBlank(message = "El campo nombre no puede estar vacio")
-	@Size(min = 4,  max= 20, message = "El nombre debe ser menor a 4 caracteres y mayor a 20.")
+	@Size(min = 4,  max= 30, message = "El nombre debe ser menor a 4 caracteres y mayor a 30.")
 	private String name;
 	
 	

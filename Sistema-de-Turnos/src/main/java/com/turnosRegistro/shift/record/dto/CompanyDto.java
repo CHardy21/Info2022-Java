@@ -34,6 +34,7 @@ public class CompanyDto {
     private Collection<Day> daysOfWeekWeWork;
 	
     
+<<<<<<< HEAD
     public CompanyDto() {
 		super();
 		// TODO Apéndice de constructor generado automáticamente
@@ -167,6 +168,73 @@ public class CompanyDto {
 	}
 
 
+=======
+    
+    
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public UserPartDto getUserCompany() {
+		return userCompany;
+	}
+	public void setUserCompany(UserPartDto userCompany) {
+		this.userCompany = userCompany;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getLogoImage() {
+		return logoImage;
+	}
+	public void setLogoImage(String logoImage) {
+		this.logoImage = logoImage;
+	}
+	public String getCBU() {
+		return CBU;
+	}
+	public void setCBU(String cBU) {
+		CBU = cBU;
+	}
+	public Collection<TurnNotAvailableDto> getTurnNotAviables() {
+		return turnNotAviables;
+	}
+	public void setTurnNotAviables(Collection<TurnNotAvailableDto> turnNotAviables) {
+		this.turnNotAviables = turnNotAviables;
+	}
+	public Collection<Day> getDaysOfWeekWeWork() {
+		return daysOfWeekWeWork;
+	}
+>>>>>>> 40fcac404a5104255a58e30590b9d28aa0ab2a66
 	public void setDaysOfWeekWeWork(Collection<Day> daysOfWeekWeWork) {
 		this.daysOfWeekWeWork = daysOfWeekWeWork;
 	}

@@ -46,7 +46,11 @@ public class Company {
     
     public Company() {
 		super();
+<<<<<<< HEAD
 		// TODO Apéndice de constructor generado automáticamente
+=======
+		// TODO Auto-generated constructor stub
+>>>>>>> 40fcac404a5104255a58e30590b9d28aa0ab2a66
 	}
 
 
@@ -189,8 +193,12 @@ public class Company {
 		this.turnNotAviables = turnNotAviables;
 	}
     
+<<<<<<< HEAD
     
     
+=======
+	
+>>>>>>> 40fcac404a5104255a58e30590b9d28aa0ab2a66
     
     
 }
