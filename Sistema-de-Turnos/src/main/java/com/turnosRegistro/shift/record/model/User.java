@@ -39,4 +39,133 @@ public class User {
     @JsonBackReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Collection<Reserve> reserveFavorite;
+	
+    
+    public User() {
+		super();
+		// TODO Apéndice de constructor generado automáticamente
+	}
+
+
+	public User(Long id, @NotBlank(message = "can´t be empty or null") String email,
+			@NotBlank(message = "can´t be empty or null") String password,
+			@NotBlank(message = "can´t be empty or null") String phoneNumber,
+			@NotBlank(message = "can´t be empty or null") String firstName, String lastName, LocalDateTime creationDate,
+			Boolean deleted, Role role, Collection<Reserve> reserveFavorite) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.firstName = firstName;
+		LastName = lastName;
+		this.creationDate = creationDate;
+		this.deleted = deleted;
+		this.role = role;
+		this.reserveFavorite = reserveFavorite;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return LastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+
+
+	public LocalDateTime getCreationDate() {
+		return creationDate;
+	}
+
+
+	public void setCreationDate(LocalDateTime creationDate) {
+		this.creationDate = creationDate;
+	}
+
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+
+
+	public Role getRole() {
+		return role;
+	}
+
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+
+	public Collection<Reserve> getReserveFavorite() {
+		return reserveFavorite;
+	}
+
+
+	public void setReserveFavorite(Collection<Reserve> reserveFavorite) {
+		this.reserveFavorite = reserveFavorite;
+	}
+    
+    
+    
+    
 }
